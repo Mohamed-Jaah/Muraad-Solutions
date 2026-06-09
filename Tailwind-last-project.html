@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muraad Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="data:image/png;base64,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">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+<body class="font-[Poppins]">
+    
+  <div class="" >
+
+    <div class="" >
+
+      <div class="max-w-4xl mx-auto  flex justify-between p-4">
+
+        <!-- Header Logo -->
+        <h1 class="bg-gradient-to-r from-violet-500 to-blue-500 bg-clip-text text-transparent  font-bold text-xl uppercase" >Muraad Solutions</h1>
+
+        
+
+    <!-- Desktop Menu -->
+
+        <nav class="" >
+          <ul class="hidden md:flex space-x-3 font-bold  bg-gradient-to-r from-violet-500 to-blue-500 bg-clip-text text-transparent " >
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Terminals</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hamburger -->
+    <button id="menuBtn" class="md:hidden text-2xl z-50"  >
+      <i id="openIcon" class="fa-solid fa-bars bg-gradient-to-r from-violet-500 to-blue-500 bg-clip-text text-transparent"  ></i>
+      <i id="closeIcon" class="fa-solid fa-xmark hidden text-white"></i>
+    </button>
+
+    <!-- MOBILE MENU -->
+  <div
+    id="mobileMenu" class="hidden fixed inset-0 bg-gradient-to-r from-violet-500 to-blue-500 z-40">
+
+    <div class="flex flex-col justify-center items-center h-full">
+
+      <h1 class="text-white text-3xl font-bold mb-10"> Muraad Solutions </h1>
+
+      <ul class="space-y-6 text-white text-xl text-center">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <button class="mt-10 bg-white text-purple-600 px-8 py-3 rounded-xl font-semibold"> Get Started </button>
+
+    </div>
+
+  </div>
+
+      </div>
+
+
+      <div class="h-screen bg-gradient-to-r from-violet-500 to-blue-500 flex items-center justify-center p-20 md:h-1/3 bg-gradient-to-r from-violet-500 to-blue-500 flex items-center justify-center p-20">
+
+  <div class="flex flex-col items-center text-center">
+
+    <h1 class="uppercase text-white font-bold text-2xl md:text-4xl lg:text-5xl mb-2">
+      Transform Your Business
+    </h1>
+
+    <p class="text-white">
+      Elevate your online presence with our cutting-edge solutions
+    </p>
+
+    <button class="mt-4 bg-white px-5 py-2 rounded-3xl">
+      Get started
+    </button>
+
+  </div>
+
+</div>
+
+      <div class="mt-15" >
+          <h1 class="text-2xl md:text-3xl font-bold text-center" >Why to Choose Us</h1>
+      </div>
+
+      <div class="max-w-3xl mx-auto mt-10  " >
+        
+
+        <div class="flex flex-col m-auto justify-center items-center md:flex-row gap-10" >
+
+          <div class="bg-white shadow-lg w-md p-10 rounded-2xl " >
+            <div>
+            <i class="fa-solid fa-bolt text-amber-500"></i>
+            </div>
+            <h1 class="font-bold" >Lighting Fast</h1>
+            <p  class="text-gray-400" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+          </div>
+
+          <div class="bg-white shadow-lg w-md p-10 rounded-2xl " >
+            
+            <div>
+            <i class="fa-solid fa-shield-halved text-red-500"></i>
+            </div>
+
+            <h1 class="font-bold" >Secure</h1>
+
+            <p  class="text-gray-400" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+        
+
+          <div class="bg-white shadow-lg w-md p-10 rounded-2xl" >
+
+            <div>
+            <i class="fa-solid fa-gem text-sky-400"></i>
+            </div>
+
+            <h1 class="font-bold" >Premium Quality</h1>
+
+            <p class="text-gray-400" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+      </div>
+    </div>
+
+
+      <!-- What our clients say about us -->
+
+     <section class="py-20 bg-gray-50">
+
+  <!-- Title -->
+  <div class="text-center mb-10">
+    <h2 class="text-2xl md:text-3xl font-bold">
+      What Our Clients Say About Us
+    </h2>
+    <p class="text-gray-500 mt-2">
+      Real feedback from our happy customers
+    </p>
+  </div>
+
+  <!-- Grid -->
+  <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Card 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg">
+      
+      <div class="flex items-center gap-4 mb-4">
+        <img 
+          src="https://randomuser.me/api/portraits/men/32.jpg"
+          class="w-12 h-12 rounded-full object-cover"
+          alt="client"
+        />
+        <div>
+          <h3 class="font-bold">Ahmed Ali</h3>
+          <span class="text-sm text-gray-400">CEO, Tech Company</span>
+        </div>
+      </div>
+
+      <p class="text-gray-600">
+        "Muraad Solutions helped us grow our business online. The design and performance are amazing!"
+      </p>
+
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg">
+      
+      <div class="flex items-center gap-4 mb-4">
+        <img 
+          src="https://randomuser.me/api/portraits/women/44.jpg"
+          class="w-12 h-12 rounded-full object-cover"
+          alt="client"
+        />
+        <div>
+          <h3 class="font-bold">Amina Hassan</h3>
+          <span class="text-sm text-gray-400">Founder, Online Store</span>
+        </div>
+      </div>
+
+      <p class="text-gray-600">
+        "Very professional team. Our website now loads fast and looks modern on all devices."
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+      <div class="mt-20 flex justify-center" >
+        <h2 class="text-2xl md:text-3xl font-bold text-center" >Simple, Transparent Pricing</h2>
+      </div>
+
+      <!-- Pricing Section -->
+
+      <div class="max-w-3xl mx-auto mt-10  " >
+        
+
+        <div class="flex flex-col m-auto justify-center items-center md:flex-row gap-10" >
+
+          <!-- card 1 -->
+
+          <div class="bg-white shadow-lg w-md p-4 rounded-2xl space-y-2" >
+            <h1 class="font-bold" >Starter</h1>
+
+            <div class="flex flex-row" >
+            <h1 class="font-bold" >$29</h1>
+            <h1 class="text-gray-400 text-xs font-bold mt-2 " >/mo</h1>
+            </div>
+
+              <p><span class="text-green-500 font-bold mx-2" >✓</span >Basic Features</p>
+              <p><span class="text-green-500 font-bold mx-2" >✓</span>5 Projects</p>
+              <p><span class="text-green-500 font-bold mx-2" >✓</span>Basic Support</p>
+
+            <button class="bg-blue-800 p-2 mt-2 w-50 text-white rounded-xl" >Get Started</button>
+
+          </div>
+
+          <!-- Card 2 -->
+
+          <div class="bg-white shadow-lg w-md p-10 rounded-2xl space-y-2 border-2 border-purple-500 " >
+            <h1 class="font-bold" >Professional</h1>
+
+            <div class="flex flex-row" >
+            <h1 class="font-bold" >$99</h1>
+            <h1 class="text-gray-400 text-xs font-bold mt-2 " >/mo</h1>
+            </div>
+
+              <p><span class="text-green-500 font-bold mx-2" >✓</span >Advanced Features</p>
+              <p><span class="text-green-500 font-bold mx-2" >✓</span>Unlimated Projects</p>
+              <p><span class="text-green-500 font-bold mx-2" >✓</span>Priority Support</p>
+
+            <button class="bg-blue-800 p-2 mt-2 w-50 text-white rounded-xl" >Get Started</button>
+
+          </div>
+
+          <!-- Card 3 -->
+
+          <div class="bg-white shadow-lg w-md p-10 rounded-2xl space-y-2" >
+            <h1 class="font-bold" >Enterprise</h1>
+
+            <div class="flex flex-row" >
+            <h1 class="font-bold" >$299</h1>
+            <h1 class="text-gray-400 text-xs font-bold mt-2 " >/mo</h1>
+            </div>
+
+              <p><span class="text-green-500 font-bold mx-2" >✓</span >Custom Features</p>
+              <p><span class="text-green-500 font-bold mx-2" >✓</span>SLA Agreement</p>
+              <p><span class="text-green-500 font-bold mx-2" >✓</span>Dedicated Support</p>
+
+            <button class="bg-blue-800 p-2 mt-2 w-50 text-white rounded-xl" >Get Started</button>
+
+          </div>
+
+      </div>
+    </div>
+
+        <!-- Get in Touch -->
+
+      <div class="mt-20 flex justify-center" >
+        <h2 class="text-2xl md:text-3xl font-bold text-center" >Get In Touch</h2>
+      </div>
+
+      <!-- Message Us Form -->
+
+      <div class="mt-10 w-lg md:w-xl shadow-2xl  mx-auto border  border-gray-200 rounded-2xl p-10 lg:w-xl" >
+
+        <div class="p-1" >
+
+          <div>
+            <h2 class="text-center font-bold text-xl mb-2" >Contact Us</h2>
+            <p class="text-center mb-3" >We'd love to hear from you. Send us a message.</p>
+          </div>
+
+          <div class="flex flex-col gap-7" >
+            <input type="text" placeholder="Name" class="w-full border p-2 rounded-xl border-gray-400" >
+            <input type="email" placeholder="Email" class="w-full border p-2 rounded-xl border-gray-400" >
+            <textarea name="" id="" rows="5" class="border p-1 rounded-xl border-gray-400 text-gray-500" >Message</textarea>
+            <button class="bg-blue-500 rounded-xl text-white p-1 py-3 bg-gradient-to-r from-violet-500 to-blue-500 hover:from-violet-600 hover:to-blue-600 transition duration-300" >Send Message</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+
+      <div class="w-full bg-slate-900 text-white mt-20">
+
+        <div class="w-4/5  mx-auto" >
+
+          <div class=" grid grid-cols-4 space-y-2 md:grid grid-cols-4 p-4 space-x-10 lg:grid grid-cols-4 p-4 space-x-10" >
+
+          <div class="col-span-4 md:col-span-1 lg:col-span-1" >
+            <h1 class="font-bold" >Muraad Solutions</h1>
+            <p class="text-gray-400" >Transform your business with out cutting-edge Solutions</p>
+          </div>
+
+          <div class="col-span-2 space-y-2 md:col-span-1 lg:col-span-1" >
+            <h1 class="font-bold" >Quick Links</h1>
+            <p class="text-gray-400" >Features</p>
+            <p class="text-gray-400" >Testimonials</p>
+            <p class="text-gray-400" >Pricing</p>
+            <p class="text-gray-400" >Contact</p>
+          </div>
+
+          <div class="col-span-2 space-y-2 md:col-span-1 lg:col-span-1" >
+            <h1 class="font-bold" >Legal</h1>
+            <p class="text-gray-400" >Privacy Policy</p>
+            <p class="text-gray-400" >Terms of Service</p>
+          </div>
+
+          <div class="col-span-4 md:col-span-1 lg:col-span-1" >
+            <h1 class="font-bold" >Contact</h1>
+            <div class="flex flex-row gap-3 md:flex gap-1  lg:flex gap-2 " >
+               <p class="text-gray-400" >Twitter</p>
+               <p class="text-gray-400" >LinkedIN</p>
+               <p class="text-gray-400" >Facebook</p>
+            </div>
+          </div>
+          
+      </div>
+      <div class="border-b border-b-gray-100 mt-4 w-full" ></div>
+      </div>
+     
+      <!-- Copy Rights -->
+
+      <footer class="text-center py-4 text-gray-500 col-span-4">
+          &copy; 2026 Muraad Solutions. All Rights Reserved.
+          </footer>
+        </div>
+
+</div>
+
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const openIcon = document.getElementById("openIcon");
+    const closeIcon = document.getElementById("closeIcon");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      openIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    });
+  </script>
+
+
+</body>
+</html>
